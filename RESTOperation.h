@@ -31,6 +31,13 @@
     BOOL _finished;
 }
 
+// Selector format:
+//
+//-(NSString*)createURL;
+//-(NSString*)postData;
+//-(id)parse:(NSData*)htmlData Parse:(NSData*)rawData;
+//
+
 -(id)initWithObject:(id)object createURL:(SEL)create postData:(SEL)post parse:(SEL)parse name:(NSString*)name;
 -(void)dealloc;
 

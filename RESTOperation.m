@@ -90,10 +90,6 @@ static NSMutableDictionary* lastRequestTimes = nil;
     [failureAction addObserver:self forKeyPath:@"isFinished" options:NSKeyValueObservingOptionNew context:nil];
 }
 
-static NSString* OAUTH_CONSUMER_KEY = @"etV0M8El01YgcT0eo0PkCw";
-static NSString* OAUTH_CONSUMER_SECRET = @"bHgPHWt4VxUA8kWrNH67UfyDU31G1KVJEqnBB6cTg";
-static NSString* OAUTH_ACCESS_TOKEN = @"480051177-h14dXYK8djxVr4fcPj9B6tJFeKPj5g3iPmzZILkV";
-static NSString* OAUTH_ACCESS_TOKEN_SECRET = @"aYufR0JFa4SgZYYaNFcNe8gTJL7kVubKP0fhq96A6x0";
 static NSString* OAUTH_HTTP_HEADER_FIELD = @"Authorization";
 
 
@@ -130,12 +126,12 @@ static NSString* OAUTH_HTTP_HEADER_FIELD = @"Authorization";
     
     // For api.twitter.com urls, authorize using oAuth
     NSString* host = [url host];    
-    if ([host isEqualToString:@"api.twitter.com"] ) {
+/*    if ([host isEqualToString:@"api.twitter.com"] ) {
         [httpRequest signRequestWithClientIdentifier:OAUTH_CONSUMER_KEY secret:OAUTH_CONSUMER_SECRET
                                      tokenIdentifier:OAUTH_ACCESS_TOKEN secret:OAUTH_ACCESS_TOKEN_SECRET
                                          usingMethod:ASIOAuthHMAC_SHA1SignatureMethod];
     }
-    
+ */   
     RESTLog(@"START\t%@ : %@", datumName, encodedURL);
     
     NSTimeInterval delay = 0.0;
